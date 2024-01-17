@@ -57,10 +57,6 @@ export const createTaskCustom = async (prevState, formData) => {
     return { success: true, message: "Task added" };
   } catch (error) {
     console.log(error);
-    let err = "";
-    for (let e of error.errors) {
-      err += e.message;
-    }
-    return { success: false, message: err };
+    return { success: false, message: error };
   }
 };
