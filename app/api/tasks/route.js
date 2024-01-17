@@ -6,7 +6,7 @@ export const GET = async (req) => {
   return NextResponse.json({ sucess: true, data: "tasks" });
 };
 
-// commit
+// commit 
 export const POST = async (req) => {
   const { content } = await req.json();
   const task = await db.task.create({
