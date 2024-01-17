@@ -24,8 +24,8 @@ const DrinkList = ({ drinks }) => {
   return (
     <ul className="grid sm:grid-cols-2 gap-6 mt-6">
       {drinks &&
-        drinks?.map((drink) => (
-          <li key={drink.idDrink}>
+        drinks?.map((drink) => {
+          return <li key={drink.idDrink}>
             <Link
               href={`/drinks/${drink.idDrink}`}
               className="text-xl font-medium"
@@ -43,7 +43,7 @@ const DrinkList = ({ drinks }) => {
               {drink.strDrink}
             </Link>
           </li>
-        ))}
+        })}
     </ul>
   );
 };

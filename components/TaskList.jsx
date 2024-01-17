@@ -8,8 +8,8 @@ const TaskList = async () => {
     <div className="flex flex-col">
       {tasks?.length > 0 ? (
         <ul className="mt-8">
-          {tasks?.map((task) => (
-            <li
+          {tasks?.map((task) => {
+            return <li
               key={task.id}
               className="flex justify-between items-center px-6 py-4 mb-4 border border-base-300 rounded-lg shadow-lg"
             >
@@ -28,7 +28,7 @@ const TaskList = async () => {
                 <DeleteForm id={task.id} />
               </div>
             </li>
-          ))}
+          })}
         </ul>
       ) : (
         <h1 className="text-lg font-medium mt-8">No tasks</h1>
