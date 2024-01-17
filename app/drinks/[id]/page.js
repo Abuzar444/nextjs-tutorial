@@ -25,7 +25,7 @@ const Drink = async ({ params }) => {
         alt={`${data?.drinks[0].strDrink} image`}
       />
       <h1 className="text-4xl mb-8">
-        {data?.drinks[0].idDrink} - {data?.drinks[0].strDrink}
+        {data?.drinks[0].idDrink}
       </h1>
     </div>
   );
