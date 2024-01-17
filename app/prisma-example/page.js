@@ -12,6 +12,7 @@ const prismaHandler = async () => {
 
 const PrismaExample = async () => {
   const tasks = await prismaHandler();
+  console.log(tasks)
   return (
     <div>
       <h1 className="text-7xl">Tasks</h1>
